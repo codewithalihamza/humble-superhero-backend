@@ -1,73 +1,122 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+## **📜 README for Backend (NestJS API)**
+```md
+# 🦸‍♂️ Humble Superhero API (Backend)
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This is the backend for the **Humble Superhero API**, built using **NestJS**. It allows users to add superheroes with a humility score and fetch them sorted by their humility.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+## 🚀 Features
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **Add Superheroes:** API to add a superhero with a name, superpower, and humility score.
+- **Fetch Superheroes:** API returns superheroes sorted by humility score.
+- **Validation:** Ensures humility score is a number between **1 and 10**.
+- **Simple In-Memory Database:** Stores data temporarily in an array.
 
-## Installation
+---
 
-```bash
-$ npm install
+## 🛠️ Tech Stack
+
+- **NestJS** - A progressive Node.js framework.
+- **Node.js & TypeScript** - For backend development.
+- **Jest** - For testing.
+
+---
+
+## 🔧 Installation & Running the Project
+
+1. **Clone the Repository:**
+   ```sh
+   https://github.com/codewithalihamza/humble-superhero-backend.git
+   ```
+
+2. **Install NestJS in the Existing Directory:**
+   ```sh
+   npm install
+   ```
+
+3. **Start the API:**
+   ```sh
+   npm run start
+   ```
+
+---
+
+## 📌 API Endpoints
+
+### **1️⃣ Add a New Superhero**
+**`POST /superheroes`**  
+📩 **Request Body:**
+```json
+{
+  "name": "Captain Kindness",
+  "superpower": "Inspires humility",
+  "humilityScore": 9
+}
+```
+📤 **Response:**
+```json
+{
+  "id": 1,
+  "name": "Captain Kindness",
+  "superpower": "Inspires humility",
+  "humilityScore": 9
+}
 ```
 
-## Running the app
+---
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+### **2️⃣ Get All Superheroes (Sorted by Humility)**
+**`GET /superheroes`**  
+📤 **Response:**
+```json
+[
+  {
+    "id": 1,
+    "name": "Captain Kindness",
+    "superpower": "Inspires humility",
+    "humilityScore": 9
+  },
+  {
+    "id": 2,
+    "name": "The Modest Marvel",
+    "superpower": "Lowers ego levels",
+    "humilityScore": 8
+  }
+]
 ```
 
-## Test
+---
 
-```bash
-# unit tests
-$ npm run test
+## ✅ **Technical Skills**
+- **Code Quality:** Modular NestJS structure for scalability.
+- **Validation:** Uses DTOs and validation for better data integrity.
+- **Testing:** Basic Jest test included.
 
-# e2e tests
-$ npm run test:e2e
+---
 
-# test coverage
-$ npm run test:cov
-```
+## 🤝 **Team Player Attitude**
+> If working with a teammate, I would:
+1. **Use Git Branches:** Feature branches (`feature/add-superhero`, `feature/tests`).
+2. **PR Reviews:** Ensure best practices before merging.
+3. **Task Division:** Backend & frontend teams work in parallel.
+4. **Communication:** Use Slack or others for updates.
+5. **Testing & Deployment:** Automate API tests before deployment.
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## 🧠 **If I Had More Time...**
+If I had more time, I would:
+1. **Use a Database:** PostgreSQL or MongoDB instead of an in-memory array.
+2. **Add Authentication:** Secure the API with JWT authentication.
+3. **Rate Limiting:** Prevent spam requests using rate-limiting middleware.
+4. **Deploy the API:** Host on **Heroku** or **Vercel**.
 
-## Stay in touch
+---
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 🎤 **Humility and Communication**
+- **Code is well-documented** with clear comments.
+- **README provides easy setup instructions.**
+- **Project is structured for easy collaboration.**
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+---
